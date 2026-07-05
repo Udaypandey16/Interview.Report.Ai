@@ -21,8 +21,7 @@ const Interview = ({ data: propData = null }) => {
   const fetchData = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:3000/api/interview/report/${interviewID}`, {
-        credentials: 'include'
+const response = await fetch(`https://interview-report-ai.onrender.com/api/interview/report/${interviewID}`, {        credentials: 'include'
       })
       const text = await response.text()
       let result = {}
